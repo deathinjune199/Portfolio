@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  10% {
+    opacity: 0;
+
+font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  }
+}
+
+body {
+    background-color:orange ;
+}
+
+
+
+p1 {
+    margin-top: 1000xp;
+    position: absolute;
+    
+}
+
+/*
+Source - https://stackoverflow.com/a/73346486
+Posted by code, modified by community. See post 'Timeline' for change history
+Retrieved 2026-02-27, License - CC BY-SA 4.0
+*/
+
+divmoving {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  animation-name: box;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  z-index: 0;
+
+}
+
+@keyframes box {
+  0%   {background-color:red; left: var(--rando0); top: var(--rando1);}
+  25%  {background-color:red; left: var(--rando2); top: var(--rando3);}
+  50%  {background-color:red; left: var(--rando4); top: var(--rando5);}
+  75%  {background-color:red; left: var(--rando6); top: var(--rando7);}
+  100% {background-color:red; left: var(--rando8); top: var(--rando9);}
+}
+
+
+
+#animatedspacebackground {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  
+}
+
+
+menu {
+  color: aliceblue;
+  position: fixed;
+  bottom: 100px;
+  z-index: 1;
+
+    top:0;
+    left:0;
+  font-family: 'Jersey 20', system-ui;
+  font-size: 500%;
+  margin-top: 800px;
+  margin-left: 70px;
+  
+  opacity: 0;
+  animation: fadein 2s ease-in 3s forwards;
+}
+
+@keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#background {
+  position: fixed;
+  top: -50px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  background-image: url('semifinalspaceportfolio.png');
+  background-size: cover;
+  background-position: center;
+  
+  animation: 
+    dezoom 5s ease-out forwards,
+    breathe 8s ease-in-out 5s infinite alternate;
+}
+
+
+@keyframes dezoom {
+  0% {
+    transform: scale(1.2);
+    filter: blur(15px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+
+@keyframes breathe {
+  0%   { transform: scale(1) translate(0px, 0px); }
+  100% { transform: scale(1.03) translate(5px, -3px); }
+}
+
+#enter-btn {
+  cursor: pointer;
+}
+
+#background.zoom-in {
+  animation: zoomin 1.5s ease-in forwards !important;
+}
+
+@keyframes zoomin {
+  0%   { transform: scale(1); filter: blur(0px); }
+  100% { transform: scale(18); filter: blur(8px); }
+}
+
+
+
+
+
+#backgroundvessel {
+  position: fixed;
+  top: -30px;
+  left: -40px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  background-image: url('vessel.png');
+  background-size: cover;
+  background-position: center;
+  
+  animation: 
+    dezoom2 3s ease-out forwards;
+}
+
+@keyframes dezoom2 {
+  0% {
+    transform: scale(8);
+    filter: blur(15px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
